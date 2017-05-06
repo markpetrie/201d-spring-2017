@@ -123,7 +123,7 @@ function sumAndMultiply(d, e, f) { //eslint-disable-line
 
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-  testSumAndMultiply(4,7,5);
+testSumAndMultiply(4, 7, 5);
 
 
 /////////////////////////////////////
@@ -153,11 +153,27 @@ new branch for your work on the next question!
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(testArray) { //eslint-disable-line
+    console.log('sumArray: ' + testArray);
+
+    var preSum = sum(testArray[0], testArray[1])[0];
+    console.log('preSum:' + preSum);
+
+    var firstElement = sum(preSum, testArray[2])[0];
+    console.log('firstElement: ' + firstElement);
+
+    var secondElement = [testArray[0], ',', testArray[1], ',', testArray[2], ' was passed in as an array of numbers, and ', firstElement, ' is their sum.'].join("");
+    console.log('secondElement: ' + secondElement);
+
+    var finalArray = [firstElement, secondElement];
+    console.log('finalArray: ' + finalArray);
+
+    return finalArray;
+    console.log('finalArray: ' + finalArray);
 
 }
 
 // Here is the test for sumArray(); uncomment it to run it
-// testSumArray(testArray);
+testSumArray(testArray);
 
 
 /////////////////////////////////////
