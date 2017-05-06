@@ -23,16 +23,13 @@ a new branch for your work on the next question!
 */
 
 // Write your code here
-function sum(a,b){ //eslint-disable-line
+function sum(a, b) { //eslint-disable-line
     var sum = a + b;
     var str = "The sum of " + a + " and " + b + " is " + sum + ".";
-    
-    return [ sum, str ];
 
-    // return [ sum, "The sum of " + a + " and " + b + " is " + sum + "."];
+    return [sum, str];
+
 }
-
-// sum (1, 2); // [ 3, "The sum of 1 and 2 is 3."]
 
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
@@ -60,15 +57,15 @@ create a new branch for your work on the next question!
 */
 
 // Write your code here
-function multiply(a,b){ //eslint-disable-line
-var product = a * b;
-var str = 'The product of ' + a + ' and ' + b + ' is ' + product + '.';
+function multiply(a, b) { //eslint-disable-line
+    var product = a * b;
+    var str = 'The product of ' + a + ' and ' + b + ' is ' + product + '.';
 
-return [ product, str ];
+    return [product, str];
 }
 
 //Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
+testMultiply(5, 9);
 
 
 /////////////////////////////////////
@@ -101,12 +98,32 @@ new branch for your work on the next question!
 */
 
 // Write your code here
-function sumAndMultiply(a,b,c){ //eslint-disable-line
+
+function sumAndMultiply(d, e, f) { //eslint-disable-line
+
+    var preSum = sum(d, e)[0]; // Add first 2 elements and store sum in single variable
+    var preMultiply = multiply(d, e)[0]; // Multiply first 2 elements and store product in single variable
+
+    var firstElement = sum(preSum, f)[0];
+    var secondElement = multiply(preMultiply, f)[0];
+    var thirdElement = [d, " and ", e, " and ", f, " sum to ", firstElement, "."].join("");
+    var fourthElement = ["The product of ", d, " and ", e, " and ", f, " is ", secondElement, "."].join("");
+
+    var finalArray = [firstElement, secondElement, thirdElement, fourthElement];
+
+    return finalArray;
+
+    // console.log('firstElement: ' + firstElement);
+    // console.log('secondElement: ' + secondElement);
+    // console.log('secondElement: ' + secondElement);
+    // console.log('secondElement: ' + secondElement);
+    // console.log('finalArray: ' + finalArray);
 
 }
 
+
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+  testSumAndMultiply(4,7,5);
 
 
 /////////////////////////////////////
@@ -133,9 +150,9 @@ new branch for your work on the next question!
 */
 
 // Write your code here
-var testArray = [2,3,4]; //eslint-disable-line
+var testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(testArray){ //eslint-disable-line
+function sumArray(testArray) { //eslint-disable-line
 
 }
 
@@ -168,9 +185,9 @@ new branch for your work on the next question!
 */
 
 // Write your code here
-function multiplyArray(testArray){ //eslint-disable-line
+function multiplyArray(testArray) { //eslint-disable-line
 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+// testMultiplyArray(2,3,4)
