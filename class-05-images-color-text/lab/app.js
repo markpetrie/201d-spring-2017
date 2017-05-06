@@ -153,22 +153,22 @@ new branch for your work on the next question!
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(testArray) { //eslint-disable-line
-    console.log('sumArray: ' + testArray);
+    // console.log('sumArray: ' + testArray);
 
     var preSum = sum(testArray[0], testArray[1])[0];
-    console.log('preSum:' + preSum);
+    // console.log('preSum:' + preSum);
 
     var firstElement = sum(preSum, testArray[2])[0];
-    console.log('firstElement: ' + firstElement);
+    // console.log('firstElement: ' + firstElement);
 
     var secondElement = [testArray[0], ',', testArray[1], ',', testArray[2], ' was passed in as an array of numbers, and ', firstElement, ' is their sum.'].join("");
-    console.log('secondElement: ' + secondElement);
+    // console.log('secondElement: ' + secondElement);
 
     var finalArray = [firstElement, secondElement];
-    console.log('finalArray: ' + finalArray);
+    // console.log('finalArray: ' + finalArray);
 
     return finalArray;
-    console.log('finalArray: ' + finalArray);
+    // console.log('finalArray: ' + finalArray);
 
 }
 
@@ -203,7 +203,22 @@ new branch for your work on the next question!
 // Write your code here
 function multiplyArray(testArray) { //eslint-disable-line
 
+    var preMultiply = multiply(testArray[0], testArray[1])[0];
+    // console.log('preMultiply:' + preMultiply);
+
+    var firstElement = multiply(preMultiply, testArray[2])[0];
+    // console.log('firstElement: ' + firstElement);
+
+    var secondElement = ['The numbers ', testArray[0], ',', testArray[1], ',', testArray[2], ' have a product of ', firstElement, '.'].join("");
+    // console.log('secondElement: ' + secondElement);
+
+    var finalArray = [firstElement, secondElement];
+    // onsole.log('finalArray: ' + finalArray);
+
+    return finalArray;
+    // console.log('finalArray: ' + finalArray);
+
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4)
+testMultiplyArray(2, 3, 4)
